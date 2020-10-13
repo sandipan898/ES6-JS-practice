@@ -213,6 +213,12 @@ console.log(language.startsWith("E"));
 console.log(language.endsWith("sH"));
 console.log(language.repeat(3));
 
+console.log("I speak " + language);
+console.log(`I speak ${language}`);
+console.log(`I speak 
+some languages like
+${language === "English" ? "British English" : "none"}`);
+
 
 
 
