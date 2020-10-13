@@ -337,22 +337,20 @@ console.log(isOdd(1,2,3,4));
 
 // Task 7: Exercise
 
-// function Translator() {
-//    this.phrase = "good day";
-//    this.englishBulgarianDictionary = {
-//        good: "добър",
-//        day: "ден"
-//    }
-// }
+function Translator() {
+   this.phrase = "good day";
+   this.englishBulgarianDictionary = {
+       good: "добър",
+       day: "ден"
+   }
+}
 
-// Translator.prototype.getBulgarianPhrase = function() {
-//    return this.phrase
-//        .split(" ")
-//        .map(function(word) {
-//            return this.englishBulgarianDictionary[word]
-//        })
-//        .join(" ");
-// }
+Translator.prototype.getBulgarianPhrase = function() {
+   return this.phrase
+       .split(" ")
+       .map(word => this.englishBulgarianDictionary[word])
+       .join(" ");
+}
  
-// const translator = new Translator();
-// console.log(translator.getBulgarianPhrase());
+const translator = new Translator();
+console.log(translator.getBulgarianPhrase());
