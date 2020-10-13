@@ -241,12 +241,16 @@ console.log(
     `The capital of ${country} sis the city of ${city}`
 );
 
+// ---------------------------------------------
+// TASK 6: Arrow functions
+
 const numbers = [1, 2, 3, 4, 5, 6];
-let doubleNumbers = numbers.map(
-    function(number) {
-        return 2*number;
-    }
-);
+//using function keyword
+// let doubleNumbers = numbers.map(
+//     function(number) {
+//         return 2*number;
+//     }
+// );
 
 // code is equivalent to the upper one
 // const numbers = [1, 2, 3, 4, 5, 6];
@@ -257,16 +261,14 @@ let doubleNumbers = numbers.map(
 // );
 
 // more simplification
-let doubleNumbers = numbers.map(
-    number => 2*number
-)
+// let doubleNumbers = numbers.map(
+//     number => 2*number // if we have a single line in function and that is the thing we are returning, then we can remove the 'return' keyward
+// );
 
+calculateDouble = number => 2*number;
+let doubleNumbers = numbers.map(calculateDouble);
 
-
-// ---------------------------------------------
-// TASK 6: Arrow functions
-
-
+console.log(doubleNumbers);
 
 
 
