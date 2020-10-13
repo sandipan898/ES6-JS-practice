@@ -2,12 +2,9 @@
 
 //console.log('Hello,,,, ES6!!!!');
 
-
-
-
-
 // ---------------------------------------------
 // Task 2: Variables (let) and Scoping
+
 console.log(dogo)
 var dogo = "Akita";
 console.log(dogo);
@@ -202,12 +199,19 @@ const [ spice1, ...restOfTheSpices ] = spices;
 console.log(spice1); 
 console.log(restOfTheSpices);
 
-const [,, thirdSpice] = spices;
+const [,, thirdSpice] = spices; // To skip the first two element
 console.log(thirdSpice);
 
 // ---------------------------------------------
 // TASK 5: Strings and Interpolation
 
+
+const language = "English";
+console.log(language.includes("sh"));
+console.log(language.startsWith("e"));
+console.log(language.startsWith("E"));
+console.log(language.endsWith("sH"));
+console.log(language.repeat(3));
 
 
 
