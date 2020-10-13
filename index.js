@@ -312,6 +312,24 @@ function Dog() {
         }, 1000
     );
 }
+// const puppy = new Dog();
+
+
+// const isOdd = () => arguments[0] % 2 === 1; 
+// console.log(isOdd(1));
+
+// const isOdd = ()  => {
+//     console.log(arguments);
+//     console.log(arguments[0]);
+//     return arguments[0] % 2 === 1;
+// };
+// using rest operator to access only the necessary part
+const isOdd = (...args)  => {
+    console.log(args);
+    return args[0] % 2 === 1;
+};
+console.log(isOdd(1,2,3,4));
+
 
 
 
