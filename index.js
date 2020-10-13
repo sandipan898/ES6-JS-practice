@@ -241,10 +241,25 @@ console.log(
     `The capital of ${country} sis the city of ${city}`
 );
 
+const numbers = [1, 2, 3, 4, 5, 6];
+let doubleNumbers = numbers.map(
+    function(number) {
+        return 2*number;
+    }
+);
 
+// code is equivalent to the upper one
+// const numbers = [1, 2, 3, 4, 5, 6];
+// let doubleNumbers = numbers.map(
+//     function(number) {
+//         return 2*number;
+//     }
+// );
 
-
-
+// more simplification
+let doubleNumbers = numbers.map(
+    number => 2*number
+)
 
 
 
