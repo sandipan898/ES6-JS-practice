@@ -271,25 +271,47 @@ let doubleNumbers = numbers.map(calculateDouble);
 console.log(doubleNumbers);
 
 
-
-
-
-
 // TASK 6: Exercise: Filter out only the prime numbers from the array
 
-// const primeNumbers = [1, 2, 3, 4, 5, 6].filter(/* add the function to filter out the prime numbers */);
-// console.log(primeNumbers);
-
-
-
-
-
+const isPrime = num => {
+    let flag = 0;
+    for(let i = num - 1; i>1; i--) {
+        if(num%i == 0) {
+            flag = 1;
+        }
+    }
+    if (flag == 0 && num != 1)  
+        return num; 
+}
+const primeNumbers = [1, 2, 3, 4, 5, 6].filter(isPrime);
+console.log(primeNumbers);
 
 
 // ---------------------------------------------
 // TASK 7: Arrow functions and this
 
+/*
+function Dog() {
+    this.age = 0;
 
+    setInterval(
+        function() {
+            this.age += 1;
+            console.log(this.age);
+        }, 1000
+    );
+}*/
+
+function Dog() {
+    this.age = 0;
+
+    setInterval(
+        () => {
+            this.age += 1;
+            console.log(this.age);
+        }, 1000
+    );
+}
 
 
 
